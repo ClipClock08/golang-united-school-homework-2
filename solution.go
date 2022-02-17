@@ -2,6 +2,10 @@ package square
 
 import "math"
 
+const SidesTriangle = 3
+const SidesSquare = 4
+const SidesCircle = 0
+
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
 type intCustomType int
 
