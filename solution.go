@@ -17,10 +17,12 @@ type intCustomType int
 
 func CalcSquare(sideLen float64, sidesNum intCustomType) float64 {
 	switch sidesNum {
-	case 0:
-		return math.Pi * sideLen * 2
-	case 3, 4:
-		return sideLen * float64(sidesNum)
+	case SidesCircle:
+		return (math.Pi * sideLen * sideLen) / 2
+	case SidesTriangle:
+		return (sideLen * math.Sqrt(3)) / 4
+	case SidesSquare:
+		return sideLen * sideLen
 	default:
 		return 0
 	}
